@@ -8,10 +8,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body>
-    <%= link_to "Главная", root_path %>
-    <%= link_to "О нас",   pages_about_path %>
-    <%= yield %>
+    <div class="container-fluid container-background">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item nav-link">
+            <%= link_to "Instaphoto", root_path, class: 'nav-landing'%>
+          </li>
+          <li class="nav-item nav-link">
+            <%= link_to "О проекте",   pages_about_path, class: 'nav-landing' %>
+          </li>
+        </ul>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
