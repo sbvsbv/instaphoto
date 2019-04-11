@@ -1,5 +1,9 @@
-$btn-primary-bg: red;
-$jumbotron-bg: rgba(255, 255, 255, 0.2);
+@import url(https://fonts.googleapis.com/css?family=Crafty+Girls);
+$display3-size: 2.5rem;
+$btn-primary-bg: #6889F0;
+$btn-warning-bg: #E08283;
+$jumbotron-bg: rgba(255, 255, 255, 0.5);
+$navbar-border-radius: 0;
 @import "bootstrap";
 
 .container-background {
@@ -8,14 +12,14 @@ $jumbotron-bg: rgba(255, 255, 255, 0.2);
 	background-size: cover;
 	background-image: url(image_path('background.jpg'));
 }
+.container-login{
+	padding-left: 0;
+	padding-right: 0;
+}
 h1.display-4{
 	font-size: 2.5rem ;
 }
-.jumbotron-landing {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 .btn-primary {
 	background-color: #6BB9F0;
 }
@@ -30,4 +34,13 @@ h1.display-4{
 .nav-landing:active {
 	color: #59ABE3;
 	text-decoration: none;
+}
+.bg-transparent {
+	background-color: rgba(255,255,255,0);
+}
+.text-logo {
+	font-family: 'Crafty Girls', cursive;
+}
+.landing-logo {
+	font-size: 2rem;
 }
