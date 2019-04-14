@@ -6,6 +6,7 @@ $jumbotron-bg: rgba(255, 255, 255, 0.4);
 $navbar-border-radius: 0;
 $card-cap-bg: rgba(255, 255, 255, 0.5);
 $card-bg: rgba(255, 255, 255, 0.4);
+$body-bg: #ECf0f1;
 @import "bootstrap";
 
 .container-background {
@@ -17,20 +18,22 @@ $card-bg: rgba(255, 255, 255, 0.4);
 .container-login{
 	padding-left: 0;
 	padding-right: 0;
+	text-align: center;
 }
-.bg-grey{
-	background-color: #ECf0f1;
-	height: 100vh;
+.card-body {
+	max-width: 90%;
 }
+
 .devise-form {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 }
 .photo-form {
-	width: 50%;
+	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
 }
 h1.display-4{
 	font-size: 2.5rem ;
