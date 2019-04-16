@@ -23,7 +23,11 @@ $body-bg: #ECf0f1;
 .card-body {
 	max-width: 90%;
 }
-
+.card {
+	width:350px;
+	height: 270px;
+	display: inline-block;
+}
 .devise-form {
 	width: 50%;
 	margin-left: auto;

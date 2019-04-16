@@ -1,0 +1,22 @@
+<%= @user.email %>
+<% unless current_user.id == @user.id %>
+	<% if current_user.subscriptions.exists?(frend_id: @user.id) %>
+		<%= link_to "UNsubscribe", unsubscribe_profile_path(@user) %><br>
+	<% else %>
+		<%= link_to "Subscribe", subscribe_profile_path(@user) %><br>
+	<% end %>
+<% end %>
+<br>
+<% @user.photos.each do |photo| %>
+<div class="card foto-form">
+  <div class= "card-block"> 
+    <%= image_tag photo.image.url(:medium) %><br>
+    <strong><%= photo.description %></strong><br>
+    <%= link_to 'Show', photo %> |
+    <% if photo.user == current_user %>
+      <%= link_to 'Edit', edit_photo_path(photo) %> |
+      <%= link_to 'Destroy', @photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+</div>
+<% end %>
