@@ -67,6 +67,7 @@ h1.display-4{
 .landing-logo {
 	font-size: 2rem;
 }
-li.pagination {
-	margin: auto;
+ul.pagination {
+	margin: 0 auto;
+	display: -webkit-inline-box;
 }
