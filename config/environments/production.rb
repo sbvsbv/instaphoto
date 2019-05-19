@@ -75,7 +75,18 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-  config.action_mailer.default_url_options = { host: 'https://instaphotosbv.herokuapp.com/', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'instaphotosbv.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'instaphotosbv.herokuapp.com',
+    #user_name:            Rails.application.secrets.mail_user_name,
+    #password:             Rails.application.secrets.mail_password,
+    user_name:             ENV.fetch('MAIL_ACCOUNT_NAME'),
+    password:              ENV.fetch('MAIL_PASSWORD'),
+    authentication:       'plain',
+    enable_starttls_auto: true }
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
